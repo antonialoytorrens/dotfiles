@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Audio system
+pipewire &
+
+# Desktop and Widgets
+pcmanfm --daemon-mode &
+pcmanfm --desktop &
+
+# System tray icons
+(sleep 2 && volumeicon) &
+(sleep 2 && clipit) &
+(sleep 5 && xfce4-power-manager) &
+(sleep 2 && blueman-applet) &
+#(sleep 2 && fbxkb-start) &
+conky -c ~/.conkyrc &
+
+# Polkit agent (standard for Debian/XFCE environment tools)
+if [ -x /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 ]; then
+    /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+fi

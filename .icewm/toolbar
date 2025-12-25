@@ -1,0 +1,3 @@
+### Commonly used applications
+prog "File Manager" /usr/share/icons/Qogir/scalable/apps/system-file-manager.svg pcmanfm
+prog "Web Browser" /usr/share/icons/Qogir/scalable/apps/web-browser.svg x-www-browser

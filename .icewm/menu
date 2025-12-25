@@ -1,0 +1,14 @@
+#prog "App Finder" /usr/share/icons/Papirus-Dark/24x24/apps/xfce4-appfinder.svg xfce4-appfinder
+#prog "Terminal" /usr/share/icons/Papirus-Dark/24x24/apps/utilities-terminal.svg x-terminal-emulator
+#prog "File Manager" /usr/share/icons/Papirus-Dark/24x24/apps/system-file-manager.svg pcmanfm-qt
+#prog "Web Browser" /usr/share/icons/Papirus-Dark/24x24/apps/internet-web-browser.svg x-www-browser
+#prog "Editor" /usr/share/icons/Papirus-Dark/24x24/apps/text-editor.svg mousepad
+#separator
+#menuprog "Applications (FDO)" /usr/share/icons/Papirus-Dark/24x24/categories/applications-other.svg icewm-menu-fdo --seps
+#menuprog "Applications (FDO)" /usr/share/icons/Papirus-Dark/24x24/categories/applications-other.svg icewm-menu-fdo --no-sub-cats
+#menuprog "Applications (XDG Maker)" /usr/share/icons/Papirus-Dark/24x24/categories/applications-other.svg xdgmenumaker -i icewm
+#menuprog "Applications (XDG Menu)" /usr/share/icons/Papirus-Dark/24x24/categories/applications-other.svg xdg_menu --format icewm --desktop debian
+#includeprog icewm-menu-fdo --seps
+#include /etc/icewm-appmenu.${LANG%%.*-C}
+#include /etc/icewm-appmenu
+includeprog icewm-menu-fdo --no-sub-cats

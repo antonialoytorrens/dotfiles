@@ -1,0 +1,8 @@
+#!/bin/bash
+sudo /usr/local/bin/desktop-menu --write-out-global
+cp /usr/share/applications/file-manager.desktop "$XDG_DESKTOP_DIR"
+cp /usr/share/applications/antiX-docs.desktop "$XDG_DESKTOP_DIR"
+
+if [ $(df -PT / | tail -n1 | awk '{print $2}' | grep -ic "aufs\|overlay") -ne 0 ]; then
+    cp /usr/share/applications/minstall.desktop "$XDG_DESKTOP_DIR"
+fi
