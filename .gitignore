@@ -1,7 +1,7 @@
+# XDG Directories
 Desktop
 Documents
 Downloads
-Downloads/*
 Images
 Imatges
 Música
@@ -12,13 +12,25 @@ Vídeos
 Videos
 Plantilles
 Templates
+
+# Config files
 .bash_history
 .bashrc
 .bash_logout
 .cache
 .config/user-dirs.dirs
 .config/mimeapps.list
+.config/clipit
+.config/dconf
+.config/netsurf/Cookies
+.config/netsurf/URLs
+.config/pulse/cookie
+.local/share/nano
+.local/share/xorg
+.local/share/zeitgeist
+.local/share/gvfs-metadata
+.local/share/recently-used.xbel
 .profile
 .sudo_as_admin_successful
 .Xauthority*
-.xsession-errors
+.xsession-errors*

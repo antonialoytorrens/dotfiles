@@ -236,10 +236,10 @@ TaskBarAutoHide=0 # 0/1
 TaskBarShowClock=1 # 0/1
 
 #  Show battery status monitor on task bar
-# TaskBarShowAPMStatus=0 # 0/1
+TaskBarShowAPMStatus=0 # 0/1
 
 #  Enable TaskBarShowAPMStatus if a battery is present
-TaskBarShowAPMAuto=1 # 0/1
+TaskBarShowAPMAuto=0 # 0/1
 
 #  Show battery status on task bar in time-format
 # TaskBarShowAPMTime=1 # 0/1
@@ -581,7 +581,7 @@ MailCommand="claws-mail"
 # NewMailCommand=""
 
 #  Command to lock display/screensaver
-LockCommand="xlock"
+LockCommand="xscreensaver-command -l"
 
 # Command to run on clock
 ClockCommand="yad-calendar" # "yad --calendar --mouse --close-on-unfocus --undecorated --skip-taskbar --button=gtk-ok:1"
@@ -598,19 +598,19 @@ OpenCommand="" # menu file browser - eg. spacefm or rox or desktop-defaults-run 
 TerminalCommand="x-terminal-emulator"
 
 #  Command to start logout
-LogoutCommand="icesh logout"
+LogoutCommand="$HOME/.local/bin/icewm-exit-menu"
 
 #  Command to cancel logout
 # LogoutCancelCommand=""
 
 #  Command to shutdown the system
-ShutdownCommand="sudo halt"
+ShutdownCommand="systemctl poweroff"
 
 #  Command to reboot the system
-RebootCommand="sudo reboot"
+RebootCommand="systemctl reboot"
 
 #  Command to send the system to standby mode
-SuspendCommand="sudo pm-suspend"
+SuspendCommand="systemctl suspend"
 
 #  Command to run on CPU status
 CPUStatusCommand="icesh if -class 'lxtask.Lxtask' then activate else runonce lxtask"
@@ -878,10 +878,10 @@ TaskBarClockLeds=0 # 0/1
 # ShowMenuButtonIcon=1 # 0/1
 
 #  Horizontal window border
-# BorderSizeX=6 # [0-128]
+BorderSizeX=10 # [0-128]
 
 #  Vertical window border
-# BorderSizeY=6 # [0-128]
+BorderSizeY=10 # [0-128]
 
 #  Horizontal dialog window border
 # DlgBorderSizeX=2 # [0-128]
@@ -1127,13 +1127,16 @@ ScrollBarX=18 # [0-64]
 # ColorNormalTitleBarShadow=""
 
 #  Background of the titlebar of active windows
-# ColorActiveTitleBar="rgb:00/00/A0"
+ColorActiveTitleBar="#1A1A1A"
 
 #  Text color of the titlebar of active windows
-# ColorActiveTitleBarText="rgb:FF/FF/FF"
+ColorActiveTitleBarText="#FFFFFF"
 
 #  Text shadow of the titlebar of active windows
 # ColorActiveTitleBarShadow=""
+
+#  Color of the border of active windows
+ColorActiveBorder="#1A1A1A"
 
 #  Background for mini icons of regular windows
 # ColorNormalMinimizedWindow="rgb:C0/C0/C0"

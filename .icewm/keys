@@ -73,7 +73,7 @@ key "Ctrl+Space" xfce4-appfinder
 
 # suggested
 key "Alt+F2" xfce4-appfinder --collapsed
-#key "Ctrl+Shift+Delete" desktop-session-exit
+key "Ctrl+Shift+Delete" /bin/bash /home/antonialoy/VirtualBox\ VMs/Shared_VBOX/antix/antonialoy/.icewm/exit-menu.sh
 
 
 #Set Volume

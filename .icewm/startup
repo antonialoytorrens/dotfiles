@@ -4,16 +4,18 @@
 pipewire &
 
 # Desktop and Widgets
-pcmanfm --daemon-mode &
+#pcmanfm --daemon-mode &
 pcmanfm --desktop &
 
 # System tray icons
-(sleep 2 && volumeicon) &
-(sleep 2 && clipit) &
-(sleep 5 && xfce4-power-manager) &
-(sleep 2 && blueman-applet) &
-#(sleep 2 && fbxkb-start) &
-conky -c ~/.conkyrc &
+volumeicon &
+clipit &
+xfce4-power-manager &
+blueman-applet &
+(sleep 2 && conky --daemonize -c ~/.conkyrc) &
+
+# Screensaver
+xscreensaver -nosplash &
 
 # Polkit agent (standard for Debian/XFCE environment tools)
 if [ -x /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 ]; then

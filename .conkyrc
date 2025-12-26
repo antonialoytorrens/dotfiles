@@ -107,10 +107,8 @@ ${alignc}Uptime: $uptime
 ${alignc}${exec disp=${DISPLAY#:}; disp=${disp%.[0-9]}; cat $HOME/.desktop-session/desktop-code.$disp 2>/dev/null}
 res:${alignr}${execi 60 xdpyinfo | sed -n -r "s/^\s*dimensions:.*\s([0-9]+x[0-9]+).*/\1/p"}
 dpi:${alignr}${execi 60 sed -nr "s/^\s*Xft.dpi:\s*([0-9]+(x[0-9]+)?).*/\1/p" $HOME/.Xresources | grep "[0-9]" || echo 96}
-Automount: ${alignr}${execi 60 grep -q "^automount=TRUE" $HOME/.desktop-session/automount.conf 2>/dev/null && echo "enabled" || echo "disabled"}
 CPU:${alignr}${cpu}%
 Freq:${alignr}${freq}
-${color}Init:${alignr}${execi 60 detect-init.sh}
 ${alignr}${cpugraph cpu0 30,170 5599cc 5599cc}
 Disk:${alignr}${diskio}
 ${alignr}${diskiograph 30,170 5599cc 5599cc}${if_up eth0}
@@ -134,6 +132,5 @@ ${alignr}${color8}Used / Total ${color}
 RAM:${alignr}$mem / $memmax
 Swap:${alignr}$swap / $swapmax
 / Disk:${alignr}${fs_used /} / ${fs_size /}
-${alignc}${execi 1000 persist-enabled}
 #Battery: ${battery_percent BAT0}% ${alignr}${color8}${battery_bar 8,70 BAT0} # You may need to change BAT0 to BAT1 or add the same line again if you have more then one battery. 
 #${execi 1000 acpi 2>/dev/null | grep -q . && echo "Battery: "}${execi 10 acpi -b 2>/dev/null | cut -d" " -f3,4 | sed 's/,$//'}
