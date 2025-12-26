@@ -9,7 +9,7 @@ pcmanfm --desktop &
 
 # System tray icons
 volumeicon &
-clipit &
+diodon &
 xfce4-power-manager &
 blueman-applet &
 (sleep 2 && conky --daemonize -c ~/.conkyrc) &
